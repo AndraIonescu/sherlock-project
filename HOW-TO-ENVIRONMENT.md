@@ -48,6 +48,12 @@ source venv/bin/activate
 (venv) lowecg@Chris-Lowe-MBP-Old sherlock-project (master) $
 ```
 
+Force Jupyter Notebook to work with the packages from the virtual environment
+
+```
+ipython kernel install --name "venv" --user
+```
+
 Now launch PyCharm or Jupyter Notebook
 
 ```
