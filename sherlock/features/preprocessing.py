@@ -21,15 +21,18 @@ from sherlock.features.helpers import literal_eval_as_str, keys_to_csv
 
 def prepare_feature_extraction():
     """Download embedding files from Google Drive if they do not exist yet."""
-    word_embedding_file = "../sherlock/features/glove.6B.50d.txt"
+
+    path = os.path.join(os.path.abspath(os.path.dirname(__file__)), "/sherlock/features/")
+
+    word_embedding_file = f"{path}glove.6B.50d.txt"
     first_paragraph_vector_file = (
-        "../sherlock/features/par_vec_trained_400.pkl.docvecs.vectors_docs.npy"
+        f"{path}par_vec_trained_400.pkl.docvecs.vectors_docs.npy"
     )
     second_paragraph_vector_file = (
-        "../sherlock/features/par_vec_trained_400.pkl.trainables.syn1neg.npy"
+        f"{path}par_vec_trained_400.pkl.trainables.syn1neg.npy"
     )
     third_paragraph_vector_file = (
-        "../sherlock/features/par_vec_trained_400.pkl.wv.vectors.npy"
+        f"{path}par_vec_trained_400.pkl.wv.vectors.npy"
     )
 
     print(
